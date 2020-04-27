@@ -1,4 +1,4 @@
-package com.capg.dnd;
+package com.capg.dnd.displaydetails;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
