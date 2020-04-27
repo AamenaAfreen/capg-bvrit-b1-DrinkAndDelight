@@ -2,19 +2,28 @@ package dnd.updateproductstock.model;
 
 import java.util.Date;
 
-public class ProductStock {
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
+import org.springframework.format.annotation.DateTimeFormat;
+@Entity
+public class ProductStock {
+@Id
 private String orderId;
 private String name;
-private double pricePerUnit;
+private double pricePerUnit; 
 private double quantityValue;
 private String quantityUnit;
 private double price;
 private String warehouseID;
+@DateTimeFormat(pattern="yyyy/MM/dd")
 private Date deliveryDate;
+@DateTimeFormat(pattern="yyyy/MM/dd")
 private Date manufactuingDate;
+@DateTimeFormat(pattern="yyyy/MM/dd")
 private Date expiryDate;
 private String qualityCheck;
+@DateTimeFormat(pattern="yyyy/MM/dd")
 private Date processDate;
 
 public ProductStock(String orderId, String name, double pricePerUnit, double quantityValue, String quantityUnit,
