@@ -7,7 +7,7 @@ import dnd.updateproductstock.repo.IproductStockRepo;
 @Service
 public class ProductStockServiceImpl implements IproductService {
 	@Autowired
-	IproductStockRepo repo;
+	IproductStockRepo repo;   
 
 	@Override
 	public String updateExitDate(String orderId) {

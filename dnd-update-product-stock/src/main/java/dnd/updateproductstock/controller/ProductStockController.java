@@ -16,7 +16,7 @@ import dnd.updateproductstock.service.IproductService;
 
 @RestController
 @RequestMapping("/product")
-public class ProductStockController {  
+public class ProductStockController {   
 	@Autowired
 	IproductService service;
 	@GetMapping("/id/{orderId}")

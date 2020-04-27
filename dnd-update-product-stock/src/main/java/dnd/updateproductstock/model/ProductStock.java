@@ -8,7 +8,7 @@ import javax.persistence.Id;
 import org.springframework.format.annotation.DateTimeFormat;
 @Entity
 public class ProductStock {
-@Id 
+@Id  
 private String orderId;
 private String name;
 private double pricePerUnit; 
