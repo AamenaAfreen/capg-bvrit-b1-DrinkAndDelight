@@ -14,7 +14,7 @@ public class ProductStockServiceImpl implements IproductService {
 		// TODO Auto-generated method stub
 		return null;
 	}
-
+   
 	@Override
 	public String updateProductStockDetails(String orderId) {
 		// TODO Auto-generated method stub
