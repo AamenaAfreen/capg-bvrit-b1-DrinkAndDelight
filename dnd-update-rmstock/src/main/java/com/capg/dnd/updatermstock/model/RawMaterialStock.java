@@ -2,8 +2,14 @@ package com.capg.dnd.updatermstock.model;
 
 import java.util.Date;
 
-public class RawMaterialStock {
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+@Entity
+@Table
 
+public class RawMaterialStock {
+@Id
 private String orderId;
 private String name;
 private double pricePerUnit;
@@ -16,6 +22,7 @@ private Date manufactuingDate;
 private Date expiryDate;
 private String qualityCheck;
 private Date processDate;
+
 
 public RawMaterialStock(String orderId, String name, double pricePerUnit, double quantityValue, String quantityUnit,
 double price, String warehouseId, Date deliveryDate, Date manufactuingDate, Date expiryDate,
