@@ -9,7 +9,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 @Entity
 public class ProductStock {
 @Id  
-private String orderId;
+private String orderId; 
 private String name;
 private double pricePerUnit; 
 private double quantityValue;

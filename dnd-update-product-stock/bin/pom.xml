@@ -52,8 +52,6 @@
 		<artifactId>ojdbc6</artifactId>
 		
 		<version>11.2.0</version>
-		<scope>system</scope>
-		<systemPath>c:\Users\LENOVO\Downloads\ojdbc6.jar</systemPath>
 		</dependency>
 		<dependency>
    <groupId>com.h2database</groupId>

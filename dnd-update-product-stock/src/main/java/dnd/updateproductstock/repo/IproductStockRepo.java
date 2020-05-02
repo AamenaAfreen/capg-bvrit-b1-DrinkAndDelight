@@ -7,3 +7,4 @@ import dnd.updateproductstock.model.ProductStock;
 public interface IproductStockRepo  extends JpaRepository<ProductStock,Long> {
 
 }  
+ 
