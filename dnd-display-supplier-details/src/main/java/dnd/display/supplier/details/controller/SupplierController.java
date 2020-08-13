@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import dnd.display.supplier.details.model.SupplierEntity;
-import dnd.display.supplier.details.service.SupplierServiceImpl;
+//import dnd.display.supplier.details.service.SupplierServiceImpl;
 
 @RestController
 @RequestMapping("/supplier")
