@@ -1,5 +1,6 @@
 package dnd.distributordetails.service;
 
+
 import dnd.distributordetails.model.DistributorEntity;
 
 public interface DistributorService{
@@ -9,5 +10,7 @@ public interface DistributorService{
 	public boolean deleteDistributorDetails(int distributorId);
 	
 	public DistributorEntity getDistributorDetails(int distributorId);
-	
+
+    public DistributorEntity updateDistributor(DistributorEntity distributor);
+
 }

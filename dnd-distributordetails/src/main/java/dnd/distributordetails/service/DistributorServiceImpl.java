@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+
 import dnd.distributordetails.Repo.DistributorRepo;
 import dnd.distributordetails.model.DistributorEntity;
 
@@ -14,18 +15,18 @@ public class DistributorServiceImpl implements DistributorService{
 	@Autowired
 	DistributorRepo repo;
 
-	public DistributorEntity addDistributorDetails1(DistributorEntity details) {
+	public DistributorEntity addDistributorDetails(DistributorEntity details) {
 		return repo.save(details);
 	}
 
-	public boolean deleteDistributorDetails1(int distributorId) {
+	public boolean deleteDistributorDetails(int distributorId) {
 		repo.deleteById(distributorId);
 		return (!repo.existsById(distributorId));
 	}
 	
 	
 
-	public DistributorEntity getDistributorDetails1(int distributorId) {
+	public DistributorEntity getDistributorDetails(int distributorId) {
 		return repo.getOne(distributorId);
 	}
 
@@ -34,21 +35,11 @@ public class DistributorServiceImpl implements DistributorService{
 	}
 
 	@Override
-	public DistributorEntity addDistributorDetails(DistributorEntity details) {
-		// TODO Auto-generated method stub
-		return null;
+	public DistributorEntity updateDistributor(DistributorEntity distributor) {
+     DistributorEntity d = repo.getOne(distributor.getDistributorId());
+         d.setName(distributor.getName());
+         d.setAddress(distributor.getAddress());
+         d.setPhoneNo(distributor.getPhoneNo());
+                return d;
 	}
-
-	@Override
-	public boolean deleteDistributorDetails(int distributorId) {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	@Override
-	public DistributorEntity getDistributorDetails(int distributorId) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-	
 }
