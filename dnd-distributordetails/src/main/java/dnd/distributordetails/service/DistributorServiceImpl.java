@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
+import org.springframework.web.client.RestTemplate;
 
 import dnd.distributordetails.Repo.DistributorRepo;
 import dnd.distributordetails.model.DistributorEntity;
@@ -14,7 +14,9 @@ public class DistributorServiceImpl implements DistributorService{
 
 	@Autowired
 	DistributorRepo repo;
-
+    @Autowired
+    //RestTemplate restTemplate;
+    
 	public DistributorEntity addDistributorDetails(DistributorEntity details) {
 		return repo.save(details);
 	}
