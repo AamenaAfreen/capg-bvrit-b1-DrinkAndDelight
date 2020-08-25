@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 
 import dnd.distributordetails.model.DistributorEntity;
 import dnd.distributordetails.service.DistributorServiceImpl;
@@ -45,6 +45,7 @@ public class DistributorController {
 	}
 	
 	@GetMapping("/id/{distributorId}")
+	@HystrixCommand(fallbackMethod = "distributorFallback")
 	public DistributorEntity getDistributorDetails(@PathVariable int distributorId) {
 		return service.getDistributorDetails(distributorId);
 	}
@@ -63,5 +64,10 @@ return service.updateDistributor(distributor);
 @GetMapping("/RMdetails/{distributorId}")
 public DistributorEntity fetchRawMaterialDetails(Integer distributorId,String delivereyStatus) {
 	return null;
-	}
+
+}
+
+public DistributorEntity distributorFallback(@PathVariable int distributorId) {
+	return new DistributorEntity(101,"praveena","hyd", (long) 912344430);
+}
 }
